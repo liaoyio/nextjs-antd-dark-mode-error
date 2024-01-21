@@ -2,8 +2,10 @@
 
 ## 版本
 
-- "antd": "5.13.2",
-- "next": "14.0.4",
+- "antd": "5.13.2"
+- "next": "14.0.4"
+
+[在线预览](https://nextjs-antd-dark-mode-error.vercel.app/)
 
 ## 问题描述
 
