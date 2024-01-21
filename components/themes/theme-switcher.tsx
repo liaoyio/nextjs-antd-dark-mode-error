@@ -1,8 +1,10 @@
 "use client";
+
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { useAntdTheme } from "@/components/themes/store";
-import { useTheme } from "next-themes";
 import { Button, Dropdown } from "antd";
+import { useTheme } from "next-themes";
+
+import { useAntdTheme } from "@/components/themes/store";
 
 type ThemeMode = "dark" | "light";
 
@@ -23,12 +25,16 @@ export default function ThemeSwitcher({ className = "" }) {
           selectedKeys: [antdThemeMode],
           onClick: (item) => setThemeMode(item.key as ThemeMode),
           items: [
-            { key: 'light', icon: <SunIcon />, label: '明亮模式' },
-            { key: 'dark', icon: <MoonIcon />, label: '暗黑模式' },
+            { key: "light", icon: <SunIcon />, label: "明亮模式" },
+            { key: "dark", icon: <MoonIcon />, label: "暗黑模式" },
           ],
         }}
       >
-        <Button type="text" className="!flex items-center" icon={theme === 'dark' ? <MoonIcon /> : <SunIcon />} >
+        <Button
+          type="text"
+          className="!flex items-center"
+          icon={theme === "dark" ? <MoonIcon /> : <SunIcon />}
+        >
           主题模式
         </Button>
       </Dropdown>

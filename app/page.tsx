@@ -1,6 +1,5 @@
-import { Button, Input, Select } from 'antd'
-import { SearchOutlined } from '@ant-design/icons'
-
+import { SearchOutlined } from "@ant-design/icons";
+import { Button, Input, Select } from "antd";
 
 export default function page() {
   return (
@@ -42,7 +41,7 @@ export default function page() {
         </Button>
       </div>
 
-      <div className='py-8'>
+      <div className="py-8">
         <Button type="primary">Primary Button</Button>
         <Button>Default Button</Button>
         <Button type="dashed">Dashed Button</Button>
@@ -60,5 +59,5 @@ export default function page() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

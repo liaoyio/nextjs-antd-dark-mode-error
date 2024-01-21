@@ -1,5 +1,5 @@
-import AntdRegistry from "./antd-registry";
 import NextThemesProviders from "../next-themes";
+import AntdRegistry from "./antd-registry";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (

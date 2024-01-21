@@ -1,4 +1,5 @@
 import { create } from "zustand";
+
 import { getItem, removeItem, setItem, StorageEnum } from "@/lib/utils/storage";
 
 type ThemeMode = "light" | "dark";
@@ -19,4 +20,3 @@ export const useAntdTheme = create<SettingStore>((set) => ({
     removeItem(StorageEnum.AntdThemeMode);
   },
 }));
-

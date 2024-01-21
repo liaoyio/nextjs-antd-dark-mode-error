@@ -5,6 +5,7 @@ import type { FC, PropsWithChildren } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { createCache, extractStyle, StyleProvider } from "@ant-design/cssinjs";
 import { ConfigProvider, theme } from "antd";
+
 import "antd/dist/reset.css";
 
 import { useAntdTheme } from "@/components/themes/store";
@@ -64,9 +65,7 @@ const AntdConfigProvider: FC<PropsWithChildren> = ({ children }) => {
 const AntdRegistry: FC<PropsWithChildren> = ({ children }) => {
   return (
     <AntdStyledComponentsRegistry>
-      <AntdConfigProvider>
-        {children}
-      </AntdConfigProvider>
+      <AntdConfigProvider>{children}</AntdConfigProvider>
     </AntdStyledComponentsRegistry>
   );
 };

@@ -1,8 +1,14 @@
-"use client"
+"use client";
+
 import { ConfigProvider, theme } from "antd";
+
 import { useAntdTheme } from "@/components/themes/store";
 
-export default function AntdConfigProvider({ children }: { children: React.ReactNode }) {
+export default function AntdConfigProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const themeMode = useAntdTheme((state) => state.themeMode);
 
   return (
