@@ -1,0 +1,88 @@
+{
+  "name": "nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "next build && next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "fmt:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "fmt:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged",
+    "commit": "git-cz",
+    "analyze": "cross-env ANALYZE=true bun run build",
+    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
+  },
+  "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "antd": "^5.13.2",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "zod": "^3.22.4",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@ant-design/cssinjs": "^1.18.2",
+    "@ant-design/icons": "^5.2.6",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@next/bundle-analyzer": "^14.0.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@t3-oss/env-nextjs": "^0.7.1",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "autoprefixer": "10.4.16",
+    "clsx": "^2.1.0",
+    "commitizen": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "cz-git": "^1.8.0",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.13.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "lucide-react": "^0.307.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-themes": "^0.2.1",
+    "postcss": "^8",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "sass": "^1.70.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "3.4.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,md,mdx}": [
+      "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
+    ],
+    "*.{ts,tsx,mdx}": [
+      "eslint --fix ."
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
