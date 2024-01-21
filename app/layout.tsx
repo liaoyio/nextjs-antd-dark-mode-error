@@ -39,7 +39,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 href="https://github.com/liaoyio/nextjs-antd-dark-mode-error"
                 target="_blank"
               >
-                <GitHubLogoIcon className="size-5 hover:opacity-70 dark:text-white" />
+                <GitHubLogoIcon className="size-5 hover:opacity-70" />
               </a>
               <ThemeSwitcher />
             </nav>

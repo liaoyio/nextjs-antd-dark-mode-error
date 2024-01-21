@@ -24,7 +24,7 @@ export default function AntdConfigProvider({
             borderRadiusLG: 8,
           },
           algorithm:
-            themeMode === "dark" ? theme.darkAlgorithm : theme.defaultAlgorithm,
+            themeMode == "dark" ? theme.darkAlgorithm : theme.defaultAlgorithm,
         }}
       >
         {children}

@@ -35,9 +35,7 @@ export default function ThemeSwitcher({ className = "" }) {
           className="!flex items-center"
           icon={theme === "dark" ? <MoonIcon /> : <SunIcon />}
         >
-          <span className="dark:!text-white">
-            {theme === "dark" ? "暗黑模式" : "明亮模式"}
-          </span>
+          {theme === "dark" ? "暗黑模式" : "明亮模式"}
         </Button>
       </Dropdown>
     </div>
